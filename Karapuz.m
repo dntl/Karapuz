@@ -58,6 +58,40 @@ static Karapuz *gInstance = NULL;
 ////////////////////////////////////////////////////////////////////////////////
 
 
++(void)remove:(id)dest
+{
+	NSMutableArray *objectsToBeRemoved = [NSMutableArray array];
+	for (NSDictionary *d in Karapuz.instance.bindings)
+	{
+		if ([d[@"dest"] isEqual:dest])
+		{
+			id obj = d[@"src"];
+			[obj removeObserver:dest];
+			[objectsToBeRemoved addObject:d];
+		}
+	}
+	
+	for (id d in objectsToBeRemoved)
+		[Karapuz.instance.bindings removeObject:d];
+}
+
+
+////////////////////////////////////////////////////////////////////////////////
+
+
++(void)dest:(id)dest block:(KarapuzBlock)block src:(id)src pty:(NSString *)pty2
+{
+	NSDictionary *d = @{@"dest": dest, @"block": block, @"src": src, @"pty2": pty2};
+	[Karapuz.instance.bindings addObject:d];
+	[src addObserver:Karapuz.instance forKeyPath:pty2 options:0 context:nil];	
+}
+
+
+////////////////////////////////////////////////////////////////////////////////
+
+
+#pragma mark - Observers
+
 -(void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary *)change context:(void *)context
 {
 	for (NSDictionary *binding in self.bindings)
@@ -67,11 +101,22 @@ static Karapuz *gInstance = NULL;
 			id value = [object performSelector:NSSelectorFromString(keyPath)];
 			id dest = binding[@"dest"];
 			NSString *pty = binding[@"pty"];
-			NSString *selectorName = [NSString stringWithFormat:@"set%@:", pty.capitalizedString];
-			SEL sel = NSSelectorFromString(selectorName);
-			[dest performSelector:sel withObject:value];
 			
-			break;
+			if (pty)
+			{
+				NSString *selectorName = [NSString stringWithFormat:@"set%@:", pty.capitalizedString];
+				SEL sel = NSSelectorFromString(selectorName);
+				[dest performSelector:sel withObject:value];
+				break;
+			}
+			
+			KarapuzBlock block = binding[@"block"];
+			if (block)
+			{
+				block(object, keyPath);
+				break;
+			}
+			
 		}
 	}
 }
