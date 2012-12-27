@@ -98,12 +98,12 @@ static Karapuz *gInstance = NULL;
 	{
 		if ([binding[@"pty2"] isEqualToString:keyPath])
 		{
-			id value = [object performSelector:NSSelectorFromString(keyPath)];
-			id dest = binding[@"dest"];
 			NSString *pty = binding[@"pty"];
 			
 			if (pty)
 			{
+				id value = [object performSelector:NSSelectorFromString(keyPath)];
+				id dest = binding[@"dest"];
 				NSString *selectorName = [NSString stringWithFormat:@"set%@:", pty.capitalizedString];
 				SEL sel = NSSelectorFromString(selectorName);
 				[dest performSelector:sel withObject:value];
