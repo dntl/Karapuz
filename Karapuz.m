@@ -96,7 +96,7 @@ static Karapuz *gInstance = NULL;
 {
 	for (NSDictionary *binding in self.bindings)
 	{
-		if ([binding[@"pty2"] isEqualToString:keyPath])
+		if ([binding[@"pty2"] isEqualToString:keyPath] && (binding[@"src"] == object))
 		{
 			NSString *pty = binding[@"pty"];
 			
@@ -107,14 +107,14 @@ static Karapuz *gInstance = NULL;
 				NSString *selectorName = [NSString stringWithFormat:@"set%@:", pty.capitalizedString];
 				SEL sel = NSSelectorFromString(selectorName);
 				[dest performSelector:sel withObject:value];
-				break;
+				continue;
 			}
 			
 			KarapuzBlock block = binding[@"block"];
 			if (block)
 			{
 				block(object, keyPath);
-				break;
+				continue;
 			}
 			
 		}
