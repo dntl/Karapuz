@@ -66,7 +66,7 @@ static Karapuz *gInstance = NULL;
 		if ([d[@"dest"] isEqual:dest])
 		{
 			id obj = d[@"src"];
-			[obj removeObserver:dest];
+			[obj removeObserver:Karapuz.instance forKeyPath:d[@"pty2"]];
 			[objectsToBeRemoved addObject:d];
 		}
 	}
