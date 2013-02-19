@@ -1,3 +1,5 @@
+//==============================================================================
+//
 //
 //  Karapuz.m
 //  Karapuz
@@ -5,15 +7,27 @@
 //  Created by Vladimir Obrizan on 19.12.12.
 //  Copyright (c) 2012 Design and Test Lab. All rights reserved.
 //
+//
+//==============================================================================
+
 
 #import "Karapuz.h"
+#import <objc/message.h>
+
+
+//==============================================================================
+
 
 @implementation Karapuz
+
+
+//==============================================================================
+
 
 static Karapuz *gInstance = NULL;
 
 
-////////////////////////////////////////////////////////////////////////////////
+//==============================================================================
 
 
 +(Karapuz *)instance
@@ -30,7 +44,7 @@ static Karapuz *gInstance = NULL;
 }
 
 
-////////////////////////////////////////////////////////////////////////////////
+//==============================================================================
 
 
 -(id)init
@@ -44,7 +58,7 @@ static Karapuz *gInstance = NULL;
 }
 
 
-////////////////////////////////////////////////////////////////////////////////
+//==============================================================================
 
 
 +(void)dest:(id)dest pty:(NSString *)pty src:(id)src pty:(NSString *)pty2;
@@ -55,7 +69,7 @@ static Karapuz *gInstance = NULL;
 }
 
 
-////////////////////////////////////////////////////////////////////////////////
+//==============================================================================
 
 
 +(void)remove:(id)dest
@@ -76,7 +90,7 @@ static Karapuz *gInstance = NULL;
 }
 
 
-////////////////////////////////////////////////////////////////////////////////
+//==============================================================================
 
 
 +(void)dest:(id)dest block:(KarapuzBlock)block src:(id)src pty:(NSString *)pty2
@@ -87,7 +101,7 @@ static Karapuz *gInstance = NULL;
 }
 
 
-////////////////////////////////////////////////////////////////////////////////
+//==============================================================================
 
 
 #pragma mark - Observers
@@ -101,12 +115,11 @@ static Karapuz *gInstance = NULL;
 			NSString *pty = binding[@"pty"];
 			
 			if (pty)
-			{
-				id value = [object performSelector:NSSelectorFromString(keyPath)];
+			{				
+				id value = objc_msgSend(object, NSSelectorFromString(keyPath));
 				id dest = binding[@"dest"];
 				NSString *selectorName = [NSString stringWithFormat:@"set%@:", pty.capitalizedString];
-				SEL sel = NSSelectorFromString(selectorName);
-				[dest performSelector:sel withObject:value];
+				objc_msgSend(dest, NSSelectorFromString(selectorName), value);
 				continue;
 			}
 			
@@ -122,6 +135,7 @@ static Karapuz *gInstance = NULL;
 }
 
 
-////////////////////////////////////////////////////////////////////////////////
+//==============================================================================
+
 
 @end

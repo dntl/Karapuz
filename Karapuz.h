@@ -1,3 +1,5 @@
+//==============================================================================
+//
 //
 //  Karapuz.h
 //  Karapuz
@@ -5,6 +7,9 @@
 //  Created by Vladimir Obrizan on 19.12.12.
 //  Copyright (c) 2012 Design and Test Lab. All rights reserved.
 //
+//
+//==============================================================================
+
 
 #import <Foundation/Foundation.h>
 
