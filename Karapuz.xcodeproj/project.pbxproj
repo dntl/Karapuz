@@ -1,0 +1,452 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		2AEE81D616DB7E5C00887C70 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2AEE81D516DB7E5C00887C70 /* UIKit.framework */; };
+		2AEE81D816DB7E5C00887C70 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2AEE81D716DB7E5C00887C70 /* Foundation.framework */; };
+		2AEE81DA16DB7E5C00887C70 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2AEE81D916DB7E5C00887C70 /* CoreGraphics.framework */; };
+		2AEE81E016DB7E5C00887C70 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 2AEE81DE16DB7E5C00887C70 /* InfoPlist.strings */; };
+		2AEE81E216DB7E5C00887C70 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 2AEE81E116DB7E5C00887C70 /* main.m */; };
+		2AEE81E616DB7E5C00887C70 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 2AEE81E516DB7E5C00887C70 /* AppDelegate.m */; };
+		2AEE81E816DB7E5C00887C70 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 2AEE81E716DB7E5C00887C70 /* Default.png */; };
+		2AEE81EA16DB7E5C00887C70 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2AEE81E916DB7E5C00887C70 /* Default@2x.png */; };
+		2AEE81EC16DB7E5C00887C70 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2AEE81EB16DB7E5C00887C70 /* Default-568h@2x.png */; };
+		2AEE81F416DB7E5C00887C70 /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2AEE81F316DB7E5C00887C70 /* SenTestingKit.framework */; };
+		2AEE81F516DB7E5C00887C70 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2AEE81D516DB7E5C00887C70 /* UIKit.framework */; };
+		2AEE81F616DB7E5C00887C70 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2AEE81D716DB7E5C00887C70 /* Foundation.framework */; };
+		2AEE81FE16DB7E5C00887C70 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 2AEE81FC16DB7E5C00887C70 /* InfoPlist.strings */; };
+		2AEE820116DB7E5C00887C70 /* KarapuzTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 2AEE820016DB7E5C00887C70 /* KarapuzTests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		2AEE81F716DB7E5C00887C70 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 2AEE81CA16DB7E5C00887C70 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 2AEE81D116DB7E5C00887C70;
+			remoteInfo = Karapuz;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		2AEE81D216DB7E5C00887C70 /* Karapuz.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Karapuz.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		2AEE81D516DB7E5C00887C70 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		2AEE81D716DB7E5C00887C70 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		2AEE81D916DB7E5C00887C70 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		2AEE81DD16DB7E5C00887C70 /* Karapuz-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Karapuz-Info.plist"; sourceTree = "<group>"; };
+		2AEE81DF16DB7E5C00887C70 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		2AEE81E116DB7E5C00887C70 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		2AEE81E316DB7E5C00887C70 /* Karapuz-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Karapuz-Prefix.pch"; sourceTree = "<group>"; };
+		2AEE81E416DB7E5C00887C70 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		2AEE81E516DB7E5C00887C70 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		2AEE81E716DB7E5C00887C70 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
+		2AEE81E916DB7E5C00887C70 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
+		2AEE81EB16DB7E5C00887C70 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		2AEE81F216DB7E5C00887C70 /* KarapuzTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = KarapuzTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
+		2AEE81F316DB7E5C00887C70 /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
+		2AEE81FB16DB7E5C00887C70 /* KarapuzTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "KarapuzTests-Info.plist"; sourceTree = "<group>"; };
+		2AEE81FD16DB7E5C00887C70 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		2AEE81FF16DB7E5C00887C70 /* KarapuzTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KarapuzTests.h; sourceTree = "<group>"; };
+		2AEE820016DB7E5C00887C70 /* KarapuzTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KarapuzTests.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		2AEE81CF16DB7E5C00887C70 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2AEE81D616DB7E5C00887C70 /* UIKit.framework in Frameworks */,
+				2AEE81D816DB7E5C00887C70 /* Foundation.framework in Frameworks */,
+				2AEE81DA16DB7E5C00887C70 /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2AEE81EE16DB7E5C00887C70 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2AEE81F416DB7E5C00887C70 /* SenTestingKit.framework in Frameworks */,
+				2AEE81F516DB7E5C00887C70 /* UIKit.framework in Frameworks */,
+				2AEE81F616DB7E5C00887C70 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		2AEE81C916DB7E5C00887C70 = {
+			isa = PBXGroup;
+			children = (
+				2AEE81DB16DB7E5C00887C70 /* Karapuz */,
+				2AEE81F916DB7E5C00887C70 /* KarapuzTests */,
+				2AEE81D416DB7E5C00887C70 /* Frameworks */,
+				2AEE81D316DB7E5C00887C70 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		2AEE81D316DB7E5C00887C70 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				2AEE81D216DB7E5C00887C70 /* Karapuz.app */,
+				2AEE81F216DB7E5C00887C70 /* KarapuzTests.octest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		2AEE81D416DB7E5C00887C70 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				2AEE81D516DB7E5C00887C70 /* UIKit.framework */,
+				2AEE81D716DB7E5C00887C70 /* Foundation.framework */,
+				2AEE81D916DB7E5C00887C70 /* CoreGraphics.framework */,
+				2AEE81F316DB7E5C00887C70 /* SenTestingKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		2AEE81DB16DB7E5C00887C70 /* Karapuz */ = {
+			isa = PBXGroup;
+			children = (
+				2AEE81E416DB7E5C00887C70 /* AppDelegate.h */,
+				2AEE81E516DB7E5C00887C70 /* AppDelegate.m */,
+				2AEE81DC16DB7E5C00887C70 /* Supporting Files */,
+			);
+			path = Karapuz;
+			sourceTree = "<group>";
+		};
+		2AEE81DC16DB7E5C00887C70 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				2AEE81DD16DB7E5C00887C70 /* Karapuz-Info.plist */,
+				2AEE81DE16DB7E5C00887C70 /* InfoPlist.strings */,
+				2AEE81E116DB7E5C00887C70 /* main.m */,
+				2AEE81E316DB7E5C00887C70 /* Karapuz-Prefix.pch */,
+				2AEE81E716DB7E5C00887C70 /* Default.png */,
+				2AEE81E916DB7E5C00887C70 /* Default@2x.png */,
+				2AEE81EB16DB7E5C00887C70 /* Default-568h@2x.png */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		2AEE81F916DB7E5C00887C70 /* KarapuzTests */ = {
+			isa = PBXGroup;
+			children = (
+				2AEE81FF16DB7E5C00887C70 /* KarapuzTests.h */,
+				2AEE820016DB7E5C00887C70 /* KarapuzTests.m */,
+				2AEE81FA16DB7E5C00887C70 /* Supporting Files */,
+			);
+			path = KarapuzTests;
+			sourceTree = "<group>";
+		};
+		2AEE81FA16DB7E5C00887C70 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				2AEE81FB16DB7E5C00887C70 /* KarapuzTests-Info.plist */,
+				2AEE81FC16DB7E5C00887C70 /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		2AEE81D116DB7E5C00887C70 /* Karapuz */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2AEE820416DB7E5C00887C70 /* Build configuration list for PBXNativeTarget "Karapuz" */;
+			buildPhases = (
+				2AEE81CE16DB7E5C00887C70 /* Sources */,
+				2AEE81CF16DB7E5C00887C70 /* Frameworks */,
+				2AEE81D016DB7E5C00887C70 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Karapuz;
+			productName = Karapuz;
+			productReference = 2AEE81D216DB7E5C00887C70 /* Karapuz.app */;
+			productType = "com.apple.product-type.application";
+		};
+		2AEE81F116DB7E5C00887C70 /* KarapuzTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2AEE820716DB7E5C00887C70 /* Build configuration list for PBXNativeTarget "KarapuzTests" */;
+			buildPhases = (
+				2AEE81ED16DB7E5C00887C70 /* Sources */,
+				2AEE81EE16DB7E5C00887C70 /* Frameworks */,
+				2AEE81EF16DB7E5C00887C70 /* Resources */,
+				2AEE81F016DB7E5C00887C70 /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				2AEE81F816DB7E5C00887C70 /* PBXTargetDependency */,
+			);
+			name = KarapuzTests;
+			productName = KarapuzTests;
+			productReference = 2AEE81F216DB7E5C00887C70 /* KarapuzTests.octest */;
+			productType = "com.apple.product-type.bundle";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		2AEE81CA16DB7E5C00887C70 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0460;
+				ORGANIZATIONNAME = "Design and Test lab";
+			};
+			buildConfigurationList = 2AEE81CD16DB7E5C00887C70 /* Build configuration list for PBXProject "Karapuz" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 2AEE81C916DB7E5C00887C70;
+			productRefGroup = 2AEE81D316DB7E5C00887C70 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				2AEE81D116DB7E5C00887C70 /* Karapuz */,
+				2AEE81F116DB7E5C00887C70 /* KarapuzTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		2AEE81D016DB7E5C00887C70 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2AEE81E016DB7E5C00887C70 /* InfoPlist.strings in Resources */,
+				2AEE81E816DB7E5C00887C70 /* Default.png in Resources */,
+				2AEE81EA16DB7E5C00887C70 /* Default@2x.png in Resources */,
+				2AEE81EC16DB7E5C00887C70 /* Default-568h@2x.png in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2AEE81EF16DB7E5C00887C70 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2AEE81FE16DB7E5C00887C70 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		2AEE81F016DB7E5C00887C70 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Run the unit tests in this test bundle.\n\"${SYSTEM_DEVELOPER_DIR}/Tools/RunUnitTests\"\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		2AEE81CE16DB7E5C00887C70 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2AEE81E216DB7E5C00887C70 /* main.m in Sources */,
+				2AEE81E616DB7E5C00887C70 /* AppDelegate.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2AEE81ED16DB7E5C00887C70 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2AEE820116DB7E5C00887C70 /* KarapuzTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		2AEE81F816DB7E5C00887C70 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 2AEE81D116DB7E5C00887C70 /* Karapuz */;
+			targetProxy = 2AEE81F716DB7E5C00887C70 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		2AEE81DE16DB7E5C00887C70 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				2AEE81DF16DB7E5C00887C70 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		2AEE81FC16DB7E5C00887C70 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				2AEE81FD16DB7E5C00887C70 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		2AEE820216DB7E5C00887C70 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		2AEE820316DB7E5C00887C70 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		2AEE820516DB7E5C00887C70 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Karapuz/Karapuz-Prefix.pch";
+				INFOPLIST_FILE = "Karapuz/Karapuz-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		2AEE820616DB7E5C00887C70 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Karapuz/Karapuz-Prefix.pch";
+				INFOPLIST_FILE = "Karapuz/Karapuz-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		2AEE820816DB7E5C00887C70 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Karapuz.app/Karapuz";
+				FRAMEWORK_SEARCH_PATHS = (
+					"\"$(SDKROOT)/Developer/Library/Frameworks\"",
+					"\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Karapuz/Karapuz-Prefix.pch";
+				INFOPLIST_FILE = "KarapuzTests/KarapuzTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Debug;
+		};
+		2AEE820916DB7E5C00887C70 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Karapuz.app/Karapuz";
+				FRAMEWORK_SEARCH_PATHS = (
+					"\"$(SDKROOT)/Developer/Library/Frameworks\"",
+					"\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Karapuz/Karapuz-Prefix.pch";
+				INFOPLIST_FILE = "KarapuzTests/KarapuzTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		2AEE81CD16DB7E5C00887C70 /* Build configuration list for PBXProject "Karapuz" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2AEE820216DB7E5C00887C70 /* Debug */,
+				2AEE820316DB7E5C00887C70 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2AEE820416DB7E5C00887C70 /* Build configuration list for PBXNativeTarget "Karapuz" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2AEE820516DB7E5C00887C70 /* Debug */,
+				2AEE820616DB7E5C00887C70 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		2AEE820716DB7E5C00887C70 /* Build configuration list for PBXNativeTarget "KarapuzTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2AEE820816DB7E5C00887C70 /* Debug */,
+				2AEE820916DB7E5C00887C70 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 2AEE81CA16DB7E5C00887C70 /* Project object */;
+}
