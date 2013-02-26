@@ -30,25 +30,25 @@ typedef void (^KarapuzBlock)(id src, NSString *pty2);
 +(Karapuz *)instance;
 
 
-/** Add observer 'dest' to observe property 'pty2' of the 'src' object.
+/** Add observer 'dst' to observe property 'pty2' of the 'src' object.
  *
- * @param	dest	An object-observer.
+ * @param	dst	An object-observer.
  * @param	pty		A property to be updated.
  * @param	src		An object-source.
  * @param	pty2	A property being observed.
  */
-+(void)dest:(id)dest pty:(NSString *)pty src:(id)src pty:(NSString *)pty2;
++(void)dst:(id)dst pty:(NSString *)pty src:(id)src pty:(NSString *)pty2;
 
 
 /** Removes the observer from all objects.
  *
- * @param	dest	The observer to be removed.
+ * @param	dst	The observer to be removed.
  */
-+(void)remove:(id)dest;
++(void)remove:(id)dst;
 
 
 
-+(void)dest:(id)dest block:(KarapuzBlock)block src:(id)src pty:(NSString *)pty2;
++(void)dst:(id)dst block:(KarapuzBlock)block src:(id)src pty:(NSString *)pty2;
 
 
 @end

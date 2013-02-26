@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2A70D82116DCE78A00B9173C /* Karapuz.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A70D82016DCE78A00B9173C /* Karapuz.m */; };
 		2AEE81D616DB7E5C00887C70 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2AEE81D516DB7E5C00887C70 /* UIKit.framework */; };
 		2AEE81D816DB7E5C00887C70 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2AEE81D716DB7E5C00887C70 /* Foundation.framework */; };
 		2AEE81DA16DB7E5C00887C70 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2AEE81D916DB7E5C00887C70 /* CoreGraphics.framework */; };
@@ -21,7 +22,6 @@
 		2AEE81F616DB7E5C00887C70 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2AEE81D716DB7E5C00887C70 /* Foundation.framework */; };
 		2AEE81FE16DB7E5C00887C70 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 2AEE81FC16DB7E5C00887C70 /* InfoPlist.strings */; };
 		2AEE820116DB7E5C00887C70 /* KarapuzTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 2AEE820016DB7E5C00887C70 /* KarapuzTests.m */; };
-		2AEE820C16DB7EA200887C70 /* Karapuz.m in Sources */ = {isa = PBXBuildFile; fileRef = 2AEE820B16DB7EA200887C70 /* Karapuz.m */; };
 		2AEE821016DB804000887C70 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2AEE820E16DB804000887C70 /* ViewController.m */; };
 		2AEE821116DB804000887C70 /* ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2AEE820F16DB804000887C70 /* ViewController.xib */; };
 		2AEE821616DBCF3700887C70 /* tmp.m in Sources */ = {isa = PBXBuildFile; fileRef = 2AEE821516DBCF3700887C70 /* tmp.m */; };
@@ -38,6 +38,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		2A70D81F16DCE78A00B9173C /* Karapuz.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Karapuz.h; sourceTree = SOURCE_ROOT; };
+		2A70D82016DCE78A00B9173C /* Karapuz.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Karapuz.m; sourceTree = SOURCE_ROOT; };
 		2AEE81D216DB7E5C00887C70 /* Karapuz.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Karapuz.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2AEE81D516DB7E5C00887C70 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		2AEE81D716DB7E5C00887C70 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -57,8 +59,6 @@
 		2AEE81FD16DB7E5C00887C70 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		2AEE81FF16DB7E5C00887C70 /* KarapuzTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KarapuzTests.h; sourceTree = "<group>"; };
 		2AEE820016DB7E5C00887C70 /* KarapuzTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KarapuzTests.m; sourceTree = "<group>"; };
-		2AEE820A16DB7EA200887C70 /* Karapuz.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Karapuz.h; sourceTree = "<group>"; };
-		2AEE820B16DB7EA200887C70 /* Karapuz.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Karapuz.m; sourceTree = "<group>"; };
 		2AEE820D16DB804000887C70 /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		2AEE820E16DB804000887C70 /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		2AEE820F16DB804000887C70 /* ViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ViewController.xib; sourceTree = "<group>"; };
@@ -123,8 +123,8 @@
 		2AEE81DB16DB7E5C00887C70 /* Karapuz */ = {
 			isa = PBXGroup;
 			children = (
-				2AEE820A16DB7EA200887C70 /* Karapuz.h */,
-				2AEE820B16DB7EA200887C70 /* Karapuz.m */,
+				2A70D81F16DCE78A00B9173C /* Karapuz.h */,
+				2A70D82016DCE78A00B9173C /* Karapuz.m */,
 				2AEE81E416DB7E5C00887C70 /* AppDelegate.h */,
 				2AEE81E516DB7E5C00887C70 /* AppDelegate.m */,
 				2AEE81DC16DB7E5C00887C70 /* Supporting Files */,
@@ -282,9 +282,9 @@
 			files = (
 				2AEE81E216DB7E5C00887C70 /* main.m in Sources */,
 				2AEE81E616DB7E5C00887C70 /* AppDelegate.m in Sources */,
-				2AEE820C16DB7EA200887C70 /* Karapuz.m in Sources */,
 				2AEE821016DB804000887C70 /* ViewController.m in Sources */,
 				2AEE821616DBCF3700887C70 /* tmp.m in Sources */,
+				2A70D82116DCE78A00B9173C /* Karapuz.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -461,6 +461,7 @@
 				2AEE820616DB7E5C00887C70 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		2AEE820716DB7E5C00887C70 /* Build configuration list for PBXNativeTarget "KarapuzTests" */ = {
 			isa = XCConfigurationList;
@@ -469,6 +470,7 @@
 				2AEE820916DB7E5C00887C70 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
