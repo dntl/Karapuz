@@ -21,6 +21,10 @@
 		2AEE81F616DB7E5C00887C70 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2AEE81D716DB7E5C00887C70 /* Foundation.framework */; };
 		2AEE81FE16DB7E5C00887C70 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 2AEE81FC16DB7E5C00887C70 /* InfoPlist.strings */; };
 		2AEE820116DB7E5C00887C70 /* KarapuzTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 2AEE820016DB7E5C00887C70 /* KarapuzTests.m */; };
+		2AEE820C16DB7EA200887C70 /* Karapuz.m in Sources */ = {isa = PBXBuildFile; fileRef = 2AEE820B16DB7EA200887C70 /* Karapuz.m */; };
+		2AEE821016DB804000887C70 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2AEE820E16DB804000887C70 /* ViewController.m */; };
+		2AEE821116DB804000887C70 /* ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2AEE820F16DB804000887C70 /* ViewController.xib */; };
+		2AEE821616DBCF3700887C70 /* tmp.m in Sources */ = {isa = PBXBuildFile; fileRef = 2AEE821516DBCF3700887C70 /* tmp.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +57,13 @@
 		2AEE81FD16DB7E5C00887C70 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		2AEE81FF16DB7E5C00887C70 /* KarapuzTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KarapuzTests.h; sourceTree = "<group>"; };
 		2AEE820016DB7E5C00887C70 /* KarapuzTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KarapuzTests.m; sourceTree = "<group>"; };
+		2AEE820A16DB7EA200887C70 /* Karapuz.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Karapuz.h; sourceTree = "<group>"; };
+		2AEE820B16DB7EA200887C70 /* Karapuz.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Karapuz.m; sourceTree = "<group>"; };
+		2AEE820D16DB804000887C70 /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		2AEE820E16DB804000887C70 /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		2AEE820F16DB804000887C70 /* ViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ViewController.xib; sourceTree = "<group>"; };
+		2AEE821416DBCF3700887C70 /* tmp.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = tmp.h; sourceTree = "<group>"; };
+		2AEE821516DBCF3700887C70 /* tmp.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = tmp.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -112,9 +123,16 @@
 		2AEE81DB16DB7E5C00887C70 /* Karapuz */ = {
 			isa = PBXGroup;
 			children = (
+				2AEE820A16DB7EA200887C70 /* Karapuz.h */,
+				2AEE820B16DB7EA200887C70 /* Karapuz.m */,
 				2AEE81E416DB7E5C00887C70 /* AppDelegate.h */,
 				2AEE81E516DB7E5C00887C70 /* AppDelegate.m */,
 				2AEE81DC16DB7E5C00887C70 /* Supporting Files */,
+				2AEE820D16DB804000887C70 /* ViewController.h */,
+				2AEE820E16DB804000887C70 /* ViewController.m */,
+				2AEE820F16DB804000887C70 /* ViewController.xib */,
+				2AEE821416DBCF3700887C70 /* tmp.h */,
+				2AEE821516DBCF3700887C70 /* tmp.m */,
 			);
 			path = Karapuz;
 			sourceTree = "<group>";
@@ -227,6 +245,7 @@
 				2AEE81E816DB7E5C00887C70 /* Default.png in Resources */,
 				2AEE81EA16DB7E5C00887C70 /* Default@2x.png in Resources */,
 				2AEE81EC16DB7E5C00887C70 /* Default-568h@2x.png in Resources */,
+				2AEE821116DB804000887C70 /* ViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -263,6 +282,9 @@
 			files = (
 				2AEE81E216DB7E5C00887C70 /* main.m in Sources */,
 				2AEE81E616DB7E5C00887C70 /* AppDelegate.m in Sources */,
+				2AEE820C16DB7EA200887C70 /* Karapuz.m in Sources */,
+				2AEE821016DB804000887C70 /* ViewController.m in Sources */,
+				2AEE821616DBCF3700887C70 /* tmp.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -368,6 +390,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Karapuz/Karapuz-Prefix.pch";
 				INFOPLIST_FILE = "Karapuz/Karapuz-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -379,6 +402,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Karapuz/Karapuz-Prefix.pch";
 				INFOPLIST_FILE = "Karapuz/Karapuz-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};

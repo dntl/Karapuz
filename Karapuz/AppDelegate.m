@@ -7,14 +7,24 @@
 //
 
 #import "AppDelegate.h"
+#import "ViewController.h"
+
+static void handleException(NSException *exception)
+{
+    NSLog(@"Handled exception");
+}
 
 @implementation AppDelegate
+
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     // Override point for customization after application launch.
-    self.window.backgroundColor = [UIColor whiteColor];
+    NSSetUncaughtExceptionHandler(&handleException);
+    
+    vc = [[ViewController alloc] initWithNibName:@"ViewController" bundle:nil];
+    self.window.rootViewController = vc;
     [self.window makeKeyAndVisible];
     return YES;
 }
