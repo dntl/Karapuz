@@ -15,7 +15,7 @@
 
 
 typedef void (^KarapuzBlock)(id src, NSString *pty2);
-
+@class WeakStore;
 @interface Karapuz : NSObject
 
 
@@ -49,6 +49,5 @@ typedef void (^KarapuzBlock)(id src, NSString *pty2);
 
 
 +(void)dst:(id)dst block:(KarapuzBlock)block src:(id)src pty:(NSString *)pty2;
-
 
 @end

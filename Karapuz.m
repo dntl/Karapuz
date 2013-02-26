@@ -13,6 +13,7 @@
 
 #import "Karapuz.h"
 #import <objc/message.h>
+#import "WeakStore.h"
 
 
 //==============================================================================
@@ -63,9 +64,12 @@ static Karapuz *gInstance = NULL;
 
 +(void)dst:(id)dst pty:(NSString *)pty src:(id)src pty:(NSString *)pty2;
 {
-	NSDictionary *d = @{@"dst": [NSValue valueWithNonretainedObject:dst],
+    WeakStore *weakDst = [[WeakStore alloc] initWithObj:dst];
+    WeakStore *weakSrc = [[WeakStore alloc] initWithObj:src];
+    
+	NSDictionary *d = @{@"dst": weakDst,
                      @"pty": pty,
-                     @"src": [NSValue valueWithNonretainedObject:src],
+                     @"src": weakSrc,
                      @"pty2": pty2,
                      @"dstAddr": [NSString stringWithFormat:@"%p",dst],
                      @"srcAddr": [NSString stringWithFormat:@"%p",src]};
@@ -79,9 +83,12 @@ static Karapuz *gInstance = NULL;
 
 +(void)dst:(id)dst block:(KarapuzBlock)block src:(id)src pty:(NSString *)pty2
 {
-	NSDictionary *d = @{@"dst": [NSValue valueWithNonretainedObject:dst],
+    WeakStore *weakDst = [[WeakStore alloc] initWithObj:dst];
+    WeakStore *weakSrc = [[WeakStore alloc] initWithObj:src];
+    
+	NSDictionary *d = @{@"dst": weakDst,
                      @"block": block,
-                     @"src": [NSValue valueWithNonretainedObject:src],
+                     @"src": weakSrc,
                      @"pty2": pty2,
                      @"dstAddr": [NSString stringWithFormat:@"%p",dst],
                      @"srcAddr": [NSString stringWithFormat:@"%p",src]};
@@ -106,10 +113,16 @@ static Karapuz *gInstance = NULL;
 			if (pty)
 			{				
 				id value = objc_msgSend(object, NSSelectorFromString(keyPath));
-				id dst = [binding[@"dst"] nonretainedObjectValue];
-				NSString *selectorName = [NSString stringWithFormat:@"set%@:", pty.capitalizedString];
-				objc_msgSend(dst, NSSelectorFromString(selectorName), value);
-				continue;
+                WeakStore *weakDst = (WeakStore *)binding[@"dst"];
+                if ([Karapuz exists:weakDst])
+                {
+                    id dst = weakDst.store;
+                    NSString *selectorName = [NSString stringWithFormat:@"set%@:", pty.capitalizedString];
+                    objc_msgSend(dst, NSSelectorFromString(selectorName), value);
+                    continue;
+                }
+                else
+                    [self removeByAddr:binding[@"dstAddr"]];
 			}
 			
 			KarapuzBlock block = binding[@"block"];
@@ -134,18 +147,75 @@ static Karapuz *gInstance = NULL;
 	{
 		if ([d[@"dstAddr"] isEqualToString:[NSString stringWithFormat:@"%p",dst]])
 		{
-			id obj = [d[@"src"] nonretainedObjectValue];
-			[obj removeObserver:Karapuz.instance forKeyPath:d[@"pty2"]];
+            WeakStore *weakSrc = (WeakStore *)d[@"src"];
+            if ([Karapuz exists:weakSrc])
+            {
+                id obj = weakSrc.store;
+                [obj removeObserver:Karapuz.instance forKeyPath:d[@"pty2"]];
+            }
 			[objectsToBeRemoved addObject:d];
 		}
 	}
 	
-	for (id d in objectsToBeRemoved)
+	for (NSDictionary *d in objectsToBeRemoved)
 		[Karapuz.instance.bindings removeObject:d];
 }
 
 
 //==============================================================================
 
+
+-(void)removeByAddr:(NSString *)addr
+{
+    NSMutableArray *objectsToBeRemoved = [NSMutableArray array];
+	for (NSDictionary *d in Karapuz.instance.bindings)
+	{
+		if ([d[@"dstAddr"] isEqualToString:addr])
+		{
+            WeakStore *weakSrc = (WeakStore *)d[@"src"];
+            if ([Karapuz exists:weakSrc])
+            {
+                id obj = weakSrc.store;
+                [obj removeObserver:Karapuz.instance forKeyPath:d[@"pty2"]];
+            }
+            [objectsToBeRemoved addObject:d];
+		}
+        else if  ([d[@"srcAddr"] isEqualToString:addr])
+		{
+            [objectsToBeRemoved addObject:d];
+		}
+	}
+	
+	for (NSDictionary *d in objectsToBeRemoved)
+		[Karapuz.instance.bindings removeObject:d];
+}
+
+
+//==============================================================================
+
+
++(BOOL)exists:(WeakStore *)weakStore
+{
+    BOOL isExist = YES;
+    @try
+    {
+        [weakStore store];
+    }
+    @catch (NSException * e)
+    {
+        NSLog(@"Exception: %@", e);
+        isExist = NO;
+    }
+    
+    if (isExist)
+    {
+        if (weakStore.store)
+            isExist = YES;
+        else
+            isExist = NO;
+    }
+
+    return isExist;
+}
 
 @end
