@@ -21,7 +21,7 @@ static void handleException(NSException *exception)
 {
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     // Override point for customization after application launch.
-    NSSetUncaughtExceptionHandler(&handleException);
+    //NSSetUncaughtExceptionHandler(&handleException);
     
     vc = [[ViewController alloc] initWithNibName:@"ViewController" bundle:nil];
     self.window.rootViewController = vc;
