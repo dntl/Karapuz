@@ -123,30 +123,4 @@
 //==============================================================================
 
 
--(void)test2
-{
-    [self subscrVC];
-    self.str = @"test";
-}
-
-
-//==============================================================================
-
-
-- (void)subscrVC
-{   
-    // Create view controller for testing
-    ViewController *vc = [[ViewController alloc] initWithNibName:@"ViewController" bundle:nil];
-    
-    // Set tag to force view loading
-    vc.view.tag = 1;
-    
-    // Subscribe property "textStr" of view controller to changing of "text" property of view controller label
-    [Karapuz dst:vc pty:@"textStr" src:self pty:@"str"];
-}
-
-
-//==============================================================================
-
-
 @end

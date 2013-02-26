@@ -38,10 +38,10 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
     
-    tmp *tmpO = [[tmp alloc] init];
+    //tmp *tmpO = [[tmp alloc] init];
     
-    [Karapuz dst:tmpO pty:@"tmpPty" src:self pty:@"testTmp"];
-    [Karapuz dst:self pty:@"testTmp2" src:tmpO pty:@"tmpPty2"];
+    //[Karapuz dst:tmpO pty:@"tmpPty" src:self pty:@"testTmp"];
+    //[Karapuz dst:self pty:@"testTmp2" src:tmpO pty:@"tmpPty2"];
 }
 
 
@@ -52,7 +52,7 @@
 {
     self.textStr = self.textField.text;
     
-    self.testTmp = @"try";
+    //self.testTmp = @"try";
 }
 
 

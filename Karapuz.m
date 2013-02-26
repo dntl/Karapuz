@@ -13,6 +13,7 @@
 
 #import "Karapuz.h"
 #import <objc/message.h>
+#import <CoreFoundation/CoreFoundation.h>
 
 
 //==============================================================================
