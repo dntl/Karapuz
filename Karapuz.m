@@ -117,7 +117,7 @@ static Karapuz *gInstance = NULL;
                 if ([Karapuz exists:weakDst])
                 {
                     id dst = weakDst.store;
-                    NSString *selectorName = [NSString stringWithFormat:@"set%@:", pty.capitalizedString];
+                    NSString *selectorName = [NSString stringWithFormat:@"set%@:", [pty stringByReplacingCharactersInRange:NSMakeRange(0,1) withString:[[pty substringToIndex:1] capitalizedString]]];
                     objc_msgSend(dst, NSSelectorFromString(selectorName), value);
                     continue;
                 }

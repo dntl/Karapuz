@@ -146,6 +146,14 @@
     // Subscribe property "textStr" of view controller to changing of "text" property of view controller label
     [Karapuz dst:vc pty:@"testTmp" src:self pty:@"str"];
     [Karapuz dst:self pty:@"str2" src:vc pty:@"testTmp2"];
+    
+    [Karapuz dst:vc
+           block:^(id src, NSString *pty2)
+     {
+         vc.textStr = @"new";
+     }
+             src:self
+             pty:@"str"];
 }
 
 
