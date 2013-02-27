@@ -84,9 +84,10 @@ static Karapuz *gInstance = NULL;
 {
     WeakStore *weakDst = [[WeakStore alloc] initWithObj:dst];
     WeakStore *weakSrc = [[WeakStore alloc] initWithObj:src];
+    WeakStore *weakBlc = [[WeakStore alloc] initWithBlo:block];
     
 	NSDictionary *d = @{@"dst": weakDst,
-                     @"block": block,
+                     @"block": weakBlc,
                      @"src": weakSrc,
                      @"pty2": pty2,
                      @"dstAddr": [NSString stringWithFormat:@"%p",dst],
@@ -108,11 +109,11 @@ static Karapuz *gInstance = NULL;
 		if ([binding[@"pty2"] isEqualToString:keyPath] && ([binding[@"srcAddr"] isEqualToString:[NSString stringWithFormat:@"%p",object]]))
 		{            
 			NSString *pty = binding[@"pty"];
-			
+			WeakStore *weakDst = (WeakStore *)binding[@"dst"];
+            
 			if (pty)
 			{				
-				id value = objc_msgSend(object, NSSelectorFromString(keyPath));
-                WeakStore *weakDst = (WeakStore *)binding[@"dst"];
+				id value = objc_msgSend(object, NSSelectorFromString(keyPath));                
                 if ([Karapuz exists:weakDst])
                 {
                     id dst = weakDst.store;
@@ -122,12 +123,17 @@ static Karapuz *gInstance = NULL;
                 }
 			}
 			
-			KarapuzBlock block = binding[@"block"];
-			if (block)
-			{
-				block(object, keyPath);
-				continue;
-			}
+            WeakStore *weakBlc = (WeakStore *)binding[@"block"];
+            if (weakBlc && [Karapuz exists:weakDst])
+                if ([Karapuz exists:weakBlc])
+                {
+                    KarapuzBlock block = weakBlc.storeBlock;
+                    if (block)
+                    {
+                        block(object, keyPath);
+                        continue;
+                    }
+                }
 			
 		}
 	}
@@ -212,6 +218,30 @@ static Karapuz *gInstance = NULL;
             isExist = NO;
     }
 
+    if (isExist)
+        return isExist;
+    else
+    {
+        isExist = YES;
+        @try
+        {
+            [weakStore storeBlock];
+        }
+        @catch (NSException * e)
+        {
+            NSLog(@"Exception: %@", e);
+            isExist = NO;
+        }
+        
+        if (isExist)
+        {
+            if (weakStore.storeBlock)
+                isExist = YES;
+            else
+                isExist = NO;
+        }
+    }
+    
     return isExist;
 }
 
@@ -232,5 +262,19 @@ static Karapuz *gInstance = NULL;
     }
     return self;
 }
+
+-(id)initWithBlo:(KarapuzBlock)blo
+{
+    self = [super init];
+	if (self)
+	{
+        self.storeBlock = blo;
+    }
+    return self;
+}
+
+
+//==============================================================================
+
 
 @end

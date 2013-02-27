@@ -128,7 +128,7 @@
     [self subscrVC];
     self.str = @"test";
     
-    STAssertTrue((Karapuz.instance.bindings.count == 0), @"Karapuz bindings shoud be empty");
+    STAssertTrue((Karapuz.instance.bindings.count == 0), @"Karapuz bindings should be empty");
 }
 
 
