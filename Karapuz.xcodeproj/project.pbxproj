@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		2A70D82116DCE78A00B9173C /* Karapuz.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A70D82016DCE78A00B9173C /* Karapuz.m */; };
-		2A70D82616DD1BF300B9173C /* WeakStore.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A70D82516DD1BF300B9173C /* WeakStore.m */; };
 		2AEE81D616DB7E5C00887C70 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2AEE81D516DB7E5C00887C70 /* UIKit.framework */; };
 		2AEE81D816DB7E5C00887C70 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2AEE81D716DB7E5C00887C70 /* Foundation.framework */; };
 		2AEE81DA16DB7E5C00887C70 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2AEE81D916DB7E5C00887C70 /* CoreGraphics.framework */; };
@@ -41,8 +40,6 @@
 /* Begin PBXFileReference section */
 		2A70D81F16DCE78A00B9173C /* Karapuz.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Karapuz.h; sourceTree = SOURCE_ROOT; };
 		2A70D82016DCE78A00B9173C /* Karapuz.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Karapuz.m; sourceTree = SOURCE_ROOT; };
-		2A70D82416DD1BF300B9173C /* WeakStore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WeakStore.h; sourceTree = SOURCE_ROOT; };
-		2A70D82516DD1BF300B9173C /* WeakStore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WeakStore.m; sourceTree = SOURCE_ROOT; };
 		2AEE81D216DB7E5C00887C70 /* Karapuz.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Karapuz.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2AEE81D516DB7E5C00887C70 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		2AEE81D716DB7E5C00887C70 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -136,8 +133,6 @@
 				2AEE820F16DB804000887C70 /* ViewController.xib */,
 				2AEE821416DBCF3700887C70 /* tmp.h */,
 				2AEE821516DBCF3700887C70 /* tmp.m */,
-				2A70D82416DD1BF300B9173C /* WeakStore.h */,
-				2A70D82516DD1BF300B9173C /* WeakStore.m */,
 			);
 			path = Karapuz;
 			sourceTree = "<group>";
@@ -290,7 +285,6 @@
 				2AEE821016DB804000887C70 /* ViewController.m in Sources */,
 				2AEE821616DBCF3700887C70 /* tmp.m in Sources */,
 				2A70D82116DCE78A00B9173C /* Karapuz.m in Sources */,
-				2A70D82616DD1BF300B9173C /* WeakStore.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -13,7 +13,6 @@
 
 #import "Karapuz.h"
 #import <objc/message.h>
-#import "WeakStore.h"
 
 
 //==============================================================================
@@ -214,6 +213,24 @@ static Karapuz *gInstance = NULL;
     }
 
     return isExist;
+}
+
+@end
+
+
+//==============================================================================
+
+
+@implementation WeakStore
+
+-(id)initWithObj:(id)obj
+{
+    self = [super init];
+	if (self)
+	{
+        self.store = obj;
+    }
+    return self;
 }
 
 @end
