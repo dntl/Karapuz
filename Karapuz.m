@@ -121,8 +121,6 @@ static Karapuz *gInstance = NULL;
                     objc_msgSend(dst, NSSelectorFromString(selectorName), value);
                     continue;
                 }
-                else
-                    [self removeByAddr:binding[@"dstAddr"]];
 			}
 			
 			KarapuzBlock block = binding[@"block"];
@@ -134,6 +132,8 @@ static Karapuz *gInstance = NULL;
 			
 		}
 	}
+    
+    [self check];
 }
 
 
@@ -165,23 +165,21 @@ static Karapuz *gInstance = NULL;
 //==============================================================================
 
 
--(void)removeByAddr:(NSString *)addr
+-(void)check
 {
     NSMutableArray *objectsToBeRemoved = [NSMutableArray array];
 	for (NSDictionary *d in Karapuz.instance.bindings)
 	{
-		if ([d[@"dstAddr"] isEqualToString:addr])
+        WeakStore *weakDst = (WeakStore *)d[@"dst"];
+        WeakStore *weakSrc = (WeakStore *)d[@"src"];
+        
+		if (![Karapuz exists:weakSrc] || ![Karapuz exists:weakDst])
 		{
-            WeakStore *weakSrc = (WeakStore *)d[@"src"];
             if ([Karapuz exists:weakSrc])
             {
                 id obj = weakSrc.store;
                 [obj removeObserver:Karapuz.instance forKeyPath:d[@"pty2"]];
             }
-            [objectsToBeRemoved addObject:d];
-		}
-        else if  ([d[@"srcAddr"] isEqualToString:addr])
-		{
             [objectsToBeRemoved addObject:d];
 		}
 	}

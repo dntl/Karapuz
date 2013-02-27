@@ -11,5 +11,6 @@
 @interface KarapuzTests : SenTestCase
 
 @property (nonatomic, strong) NSString *str;
+@property (nonatomic, strong) NSString *str2;
 
 @end
