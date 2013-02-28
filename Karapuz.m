@@ -164,6 +164,8 @@ static Karapuz *gInstance = NULL;
 	
 	for (NSDictionary *d in objectsToBeRemoved)
 		[Karapuz.instance.bindings removeObject:d];
+    
+    [Karapuz.instance check];
 }
 
 
@@ -199,48 +201,12 @@ static Karapuz *gInstance = NULL;
 
 +(BOOL)exists:(WeakStore *)weakStore
 {
-    BOOL isExist = YES;
-    @try
-    {
-        [weakStore store];
-    }
-    @catch (NSException * e)
-    {
-        NSLog(@"Exception: %@", e);
-        isExist = NO;
-    }
+    BOOL isExist = [weakStore store] ? YES : NO;
     
-    if (isExist)
-    {
-        if (weakStore.store)
-            isExist = YES;
-        else
-            isExist = NO;
-    }
-
     if (isExist)
         return isExist;
     else
-    {
-        isExist = YES;
-        @try
-        {
-            [weakStore storeBlock];
-        }
-        @catch (NSException * e)
-        {
-            NSLog(@"Exception: %@", e);
-            isExist = NO;
-        }
-        
-        if (isExist)
-        {
-            if (weakStore.storeBlock)
-                isExist = YES;
-            else
-                isExist = NO;
-        }
-    }
+        isExist = [weakStore storeBlock] ? YES : NO;
     
     return isExist;
 }
