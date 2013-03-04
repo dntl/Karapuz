@@ -116,7 +116,7 @@
     STAssertTrue([vc.label.text isEqualToString:@"Test 2 text"], @"Strings not match");
     
     // vc.label2.text should stay "Test text: Test 1 text" because test class was unsubsribed
-    STAssertTrue([vc.label2.text isEqualToString:@"Test text: Test 1 text"], @"Strings not match");
+    STAssertFalse([vc.label2.text isEqualToString:@"Test text: Test 1 text"], @"Strings not match");
 }
 
 
