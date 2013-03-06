@@ -71,7 +71,7 @@
     STAssertTrue([t2.tmpPty isEqualToString:@"test2"], @"Strings not match");
     STAssertTrue([t2.tmpPty2 isEqualToString:@"test2"], @"Strings not match");
     
-    //[Karapuz remove:t2];
+    [Karapuz remove:t2];
     t.tmpPty2 = @"test3";
     
     STAssertTrue([t.tmpPty isEqualToString:@"test"], @"Strings not match");
