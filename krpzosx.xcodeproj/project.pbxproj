@@ -10,6 +10,16 @@
 		2AA0371016E78E8A0030FA34 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2AA0370F16E78E8A0030FA34 /* Foundation.framework */; };
 		2AA0371316E78E8A0030FA34 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 2AA0371216E78E8A0030FA34 /* main.m */; };
 		2AA0371716E78E8A0030FA34 /* krpzosx.1 in CopyFiles */ = {isa = PBXBuildFile; fileRef = 2AA0371616E78E8A0030FA34 /* krpzosx.1 */; };
+		2AA0372716E78F250030FA34 /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2AA0372616E78F250030FA34 /* SenTestingKit.framework */; };
+		2AA0372916E78F250030FA34 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2AA0372816E78F250030FA34 /* Cocoa.framework */; };
+		2AA0373316E78F250030FA34 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 2AA0373116E78F250030FA34 /* InfoPlist.strings */; };
+		2AA0373616E78F250030FA34 /* KrpzosxTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 2AA0373516E78F250030FA34 /* KrpzosxTests.m */; };
+		2AA0373D16E78F800030FA34 /* tmp.m in Sources */ = {isa = PBXBuildFile; fileRef = 2AA0373C16E78F800030FA34 /* tmp.m */; };
+		2AA0374316E791A40030FA34 /* krpzosx.1 in Resources */ = {isa = PBXBuildFile; fileRef = 2AA0374116E791A40030FA34 /* krpzosx.1 */; };
+		2AA0374416E791A40030FA34 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 2AA0374216E791A40030FA34 /* main.m */; };
+		2AA0374516E791A40030FA34 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 2AA0374216E791A40030FA34 /* main.m */; };
+		2AA0374C16E792220030FA34 /* Karapuz.m in Sources */ = {isa = PBXBuildFile; fileRef = 2AA0374B16E792220030FA34 /* Karapuz.m */; };
+		2AA0374D16E792220030FA34 /* Karapuz.m in Sources */ = {isa = PBXBuildFile; fileRef = 2AA0374B16E792220030FA34 /* Karapuz.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -31,6 +41,24 @@
 		2AA0371216E78E8A0030FA34 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		2AA0371516E78E8A0030FA34 /* krpzosx-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "krpzosx-Prefix.pch"; sourceTree = "<group>"; };
 		2AA0371616E78E8A0030FA34 /* krpzosx.1 */ = {isa = PBXFileReference; lastKnownFileType = text.man; path = krpzosx.1; sourceTree = "<group>"; };
+		2AA0372516E78F250030FA34 /* KrpzosxTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = KrpzosxTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
+		2AA0372616E78F250030FA34 /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
+		2AA0372816E78F250030FA34 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = Library/Frameworks/Cocoa.framework; sourceTree = DEVELOPER_DIR; };
+		2AA0372B16E78F250030FA34 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
+		2AA0372C16E78F250030FA34 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		2AA0372D16E78F250030FA34 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		2AA0373016E78F250030FA34 /* KrpzosxTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "KrpzosxTests-Info.plist"; sourceTree = "<group>"; };
+		2AA0373216E78F250030FA34 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		2AA0373416E78F250030FA34 /* KrpzosxTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KrpzosxTests.h; sourceTree = "<group>"; };
+		2AA0373516E78F250030FA34 /* KrpzosxTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KrpzosxTests.m; sourceTree = "<group>"; };
+		2AA0373716E78F250030FA34 /* KrpzosxTests-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "KrpzosxTests-Prefix.pch"; sourceTree = "<group>"; };
+		2AA0373B16E78F800030FA34 /* tmp.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = tmp.h; sourceTree = "<group>"; };
+		2AA0373C16E78F800030FA34 /* tmp.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = tmp.m; sourceTree = "<group>"; };
+		2AA0374016E791A40030FA34 /* krpzosx-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "krpzosx-Prefix.pch"; sourceTree = "<group>"; };
+		2AA0374116E791A40030FA34 /* krpzosx.1 */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.man; path = krpzosx.1; sourceTree = "<group>"; };
+		2AA0374216E791A40030FA34 /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		2AA0374A16E792220030FA34 /* Karapuz.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Karapuz.h; sourceTree = SOURCE_ROOT; };
+		2AA0374B16E792220030FA34 /* Karapuz.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Karapuz.m; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -42,6 +70,15 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		2AA0372116E78F250030FA34 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2AA0372716E78F250030FA34 /* SenTestingKit.framework in Frameworks */,
+				2AA0372916E78F250030FA34 /* Cocoa.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -49,6 +86,7 @@
 			isa = PBXGroup;
 			children = (
 				2AA0371116E78E8A0030FA34 /* krpzosx */,
+				2AA0372E16E78F250030FA34 /* KrpzosxTests */,
 				2AA0370E16E78E8A0030FA34 /* Frameworks */,
 				2AA0370D16E78E8A0030FA34 /* Products */,
 			);
@@ -58,6 +96,7 @@
 			isa = PBXGroup;
 			children = (
 				2AA0370C16E78E8A0030FA34 /* krpzosx */,
+				2AA0372516E78F250030FA34 /* KrpzosxTests.octest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -66,6 +105,9 @@
 			isa = PBXGroup;
 			children = (
 				2AA0370F16E78E8A0030FA34 /* Foundation.framework */,
+				2AA0372616E78F250030FA34 /* SenTestingKit.framework */,
+				2AA0372816E78F250030FA34 /* Cocoa.framework */,
+				2AA0372A16E78F250030FA34 /* Other Frameworks */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -73,6 +115,9 @@
 		2AA0371116E78E8A0030FA34 /* krpzosx */ = {
 			isa = PBXGroup;
 			children = (
+				2AA0374A16E792220030FA34 /* Karapuz.h */,
+				2AA0374B16E792220030FA34 /* Karapuz.m */,
+				2AA0373F16E791A40030FA34 /* krpzosx */,
 				2AA0371216E78E8A0030FA34 /* main.m */,
 				2AA0371616E78E8A0030FA34 /* krpzosx.1 */,
 				2AA0371416E78E8A0030FA34 /* Supporting Files */,
@@ -86,6 +131,48 @@
 				2AA0371516E78E8A0030FA34 /* krpzosx-Prefix.pch */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		2AA0372A16E78F250030FA34 /* Other Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				2AA0372B16E78F250030FA34 /* AppKit.framework */,
+				2AA0372C16E78F250030FA34 /* CoreData.framework */,
+				2AA0372D16E78F250030FA34 /* Foundation.framework */,
+			);
+			name = "Other Frameworks";
+			sourceTree = "<group>";
+		};
+		2AA0372E16E78F250030FA34 /* KrpzosxTests */ = {
+			isa = PBXGroup;
+			children = (
+				2AA0373B16E78F800030FA34 /* tmp.h */,
+				2AA0373C16E78F800030FA34 /* tmp.m */,
+				2AA0373416E78F250030FA34 /* KrpzosxTests.h */,
+				2AA0373516E78F250030FA34 /* KrpzosxTests.m */,
+				2AA0372F16E78F250030FA34 /* Supporting Files */,
+			);
+			path = KrpzosxTests;
+			sourceTree = "<group>";
+		};
+		2AA0372F16E78F250030FA34 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				2AA0373016E78F250030FA34 /* KrpzosxTests-Info.plist */,
+				2AA0373116E78F250030FA34 /* InfoPlist.strings */,
+				2AA0373716E78F250030FA34 /* KrpzosxTests-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		2AA0373F16E791A40030FA34 /* krpzosx */ = {
+			isa = PBXGroup;
+			children = (
+				2AA0374016E791A40030FA34 /* krpzosx-Prefix.pch */,
+				2AA0374116E791A40030FA34 /* krpzosx.1 */,
+				2AA0374216E791A40030FA34 /* main.m */,
+			);
+			name = krpzosx;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -107,6 +194,24 @@
 			productName = krpzosx;
 			productReference = 2AA0370C16E78E8A0030FA34 /* krpzosx */;
 			productType = "com.apple.product-type.tool";
+		};
+		2AA0372416E78F250030FA34 /* KrpzosxTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2AA0373816E78F250030FA34 /* Build configuration list for PBXNativeTarget "KrpzosxTests" */;
+			buildPhases = (
+				2AA0372016E78F250030FA34 /* Sources */,
+				2AA0372116E78F250030FA34 /* Frameworks */,
+				2AA0372216E78F250030FA34 /* Resources */,
+				2AA0372316E78F250030FA34 /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = KrpzosxTests;
+			productName = KrpzosxTests;
+			productReference = 2AA0372516E78F250030FA34 /* KrpzosxTests.octest */;
+			productType = "com.apple.product-type.bundle";
 		};
 /* End PBXNativeTarget section */
 
@@ -130,9 +235,38 @@
 			projectRoot = "";
 			targets = (
 				2AA0370B16E78E8A0030FA34 /* krpzosx */,
+				2AA0372416E78F250030FA34 /* KrpzosxTests */,
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		2AA0372216E78F250030FA34 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2AA0373316E78F250030FA34 /* InfoPlist.strings in Resources */,
+				2AA0374316E791A40030FA34 /* krpzosx.1 in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		2AA0372316E78F250030FA34 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Run the unit tests in this test bundle.\n\"${SYSTEM_DEVELOPER_DIR}/Tools/RunUnitTests\"\n";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		2AA0370816E78E8A0030FA34 /* Sources */ = {
@@ -140,10 +274,34 @@
 			buildActionMask = 2147483647;
 			files = (
 				2AA0371316E78E8A0030FA34 /* main.m in Sources */,
+				2AA0374416E791A40030FA34 /* main.m in Sources */,
+				2AA0374C16E792220030FA34 /* Karapuz.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2AA0372016E78F250030FA34 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2AA0373616E78F250030FA34 /* KrpzosxTests.m in Sources */,
+				2AA0373D16E78F800030FA34 /* tmp.m in Sources */,
+				2AA0374516E791A40030FA34 /* main.m in Sources */,
+				2AA0374D16E792220030FA34 /* Karapuz.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		2AA0373116E78F250030FA34 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				2AA0373216E78F250030FA34 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		2AA0371816E78E8A0030FA34 /* Debug */ = {
@@ -223,6 +381,32 @@
 			};
 			name = Release;
 		};
+		2AA0373916E78F250030FA34 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = "\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"";
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "KrpzosxTests/KrpzosxTests-Prefix.pch";
+				INFOPLIST_FILE = "KrpzosxTests/KrpzosxTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Debug;
+		};
+		2AA0373A16E78F250030FA34 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = "\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"";
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "KrpzosxTests/KrpzosxTests-Prefix.pch";
+				INFOPLIST_FILE = "KrpzosxTests/KrpzosxTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -240,6 +424,14 @@
 			buildConfigurations = (
 				2AA0371B16E78E8A0030FA34 /* Debug */,
 				2AA0371C16E78E8A0030FA34 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		2AA0373816E78F250030FA34 /* Build configuration list for PBXNativeTarget "KrpzosxTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2AA0373916E78F250030FA34 /* Debug */,
+				2AA0373A16E78F250030FA34 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 		};
