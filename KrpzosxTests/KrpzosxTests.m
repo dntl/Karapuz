@@ -62,6 +62,7 @@
     STAssertTrue([t.tmpPty2 isEqualToString:@"test"], @"Strings not match");
     STAssertTrue([t2.tmpPty isEqualToString:@"test"], @"Strings not match");
     STAssertTrue([t.tmpPty2 isEqualToString:@"test"], @"Strings not match");
+    STAssertTrue((Karapuz.instance.bindings.count == 3), @"Karapuz bindings should have 3 bindings");
     
     [Karapuz remove:t];
     t.tmpPty2 = @"test2";
@@ -70,6 +71,7 @@
     STAssertTrue([t.tmpPty2 isEqualToString:@"test2"], @"Strings not match");
     STAssertTrue([t2.tmpPty isEqualToString:@"test2"], @"Strings not match");
     STAssertTrue([t2.tmpPty2 isEqualToString:@"test2"], @"Strings not match");
+    STAssertTrue((Karapuz.instance.bindings.count == 2), @"Karapuz bindings should have 3 bindings");
     
     [Karapuz remove:t2];
     t.tmpPty2 = @"test3";
@@ -78,6 +80,7 @@
     STAssertTrue([t.tmpPty2 isEqualToString:@"test3"], @"Strings not match");
     STAssertTrue([t2.tmpPty isEqualToString:@"test2"], @"Strings not match");
     STAssertTrue([t2.tmpPty2 isEqualToString:@"test2"], @"Strings not match");
+    STAssertTrue((Karapuz.instance.bindings.count == 0), @"Karapuz bindings should be empty");
 }
 
 
