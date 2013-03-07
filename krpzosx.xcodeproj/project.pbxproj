@@ -15,9 +15,6 @@
 		2AA0373316E78F250030FA34 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 2AA0373116E78F250030FA34 /* InfoPlist.strings */; };
 		2AA0373616E78F250030FA34 /* KrpzosxTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 2AA0373516E78F250030FA34 /* KrpzosxTests.m */; };
 		2AA0373D16E78F800030FA34 /* tmp.m in Sources */ = {isa = PBXBuildFile; fileRef = 2AA0373C16E78F800030FA34 /* tmp.m */; };
-		2AA0374316E791A40030FA34 /* krpzosx.1 in Resources */ = {isa = PBXBuildFile; fileRef = 2AA0374116E791A40030FA34 /* krpzosx.1 */; };
-		2AA0374416E791A40030FA34 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 2AA0374216E791A40030FA34 /* main.m */; };
-		2AA0374516E791A40030FA34 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 2AA0374216E791A40030FA34 /* main.m */; };
 		2AA0374C16E792220030FA34 /* Karapuz.m in Sources */ = {isa = PBXBuildFile; fileRef = 2AA0374B16E792220030FA34 /* Karapuz.m */; };
 		2AA0374D16E792220030FA34 /* Karapuz.m in Sources */ = {isa = PBXBuildFile; fileRef = 2AA0374B16E792220030FA34 /* Karapuz.m */; };
 /* End PBXBuildFile section */
@@ -54,9 +51,6 @@
 		2AA0373716E78F250030FA34 /* KrpzosxTests-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "KrpzosxTests-Prefix.pch"; sourceTree = "<group>"; };
 		2AA0373B16E78F800030FA34 /* tmp.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = tmp.h; sourceTree = "<group>"; };
 		2AA0373C16E78F800030FA34 /* tmp.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = tmp.m; sourceTree = "<group>"; };
-		2AA0374016E791A40030FA34 /* krpzosx-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "krpzosx-Prefix.pch"; sourceTree = "<group>"; };
-		2AA0374116E791A40030FA34 /* krpzosx.1 */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.man; path = krpzosx.1; sourceTree = "<group>"; };
-		2AA0374216E791A40030FA34 /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		2AA0374A16E792220030FA34 /* Karapuz.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Karapuz.h; sourceTree = SOURCE_ROOT; };
 		2AA0374B16E792220030FA34 /* Karapuz.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Karapuz.m; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
@@ -117,7 +111,6 @@
 			children = (
 				2AA0374A16E792220030FA34 /* Karapuz.h */,
 				2AA0374B16E792220030FA34 /* Karapuz.m */,
-				2AA0373F16E791A40030FA34 /* krpzosx */,
 				2AA0371216E78E8A0030FA34 /* main.m */,
 				2AA0371616E78E8A0030FA34 /* krpzosx.1 */,
 				2AA0371416E78E8A0030FA34 /* Supporting Files */,
@@ -163,16 +156,6 @@
 				2AA0373716E78F250030FA34 /* KrpzosxTests-Prefix.pch */,
 			);
 			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
-		2AA0373F16E791A40030FA34 /* krpzosx */ = {
-			isa = PBXGroup;
-			children = (
-				2AA0374016E791A40030FA34 /* krpzosx-Prefix.pch */,
-				2AA0374116E791A40030FA34 /* krpzosx.1 */,
-				2AA0374216E791A40030FA34 /* main.m */,
-			);
-			name = krpzosx;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -246,7 +229,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				2AA0373316E78F250030FA34 /* InfoPlist.strings in Resources */,
-				2AA0374316E791A40030FA34 /* krpzosx.1 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -274,7 +256,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				2AA0371316E78E8A0030FA34 /* main.m in Sources */,
-				2AA0374416E791A40030FA34 /* main.m in Sources */,
 				2AA0374C16E792220030FA34 /* Karapuz.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -285,7 +266,6 @@
 			files = (
 				2AA0373616E78F250030FA34 /* KrpzosxTests.m in Sources */,
 				2AA0373D16E78F800030FA34 /* tmp.m in Sources */,
-				2AA0374516E791A40030FA34 /* main.m in Sources */,
 				2AA0374D16E792220030FA34 /* Karapuz.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -426,6 +406,7 @@
 				2AA0371C16E78E8A0030FA34 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		2AA0373816E78F250030FA34 /* Build configuration list for PBXNativeTarget "KrpzosxTests" */ = {
 			isa = XCConfigurationList;
@@ -434,6 +415,7 @@
 				2AA0373A16E78F250030FA34 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
