@@ -59,7 +59,10 @@ typedef void (^KarapuzBlock)(id src, NSString *pty2);
 @interface WeakStore : NSObject
 
 @property (nonatomic, weak) id store;
-@property (nonatomic, assign) KarapuzBlock storeBlock;
+
+// Blocks must have the "copy" attribute, as they are allocated on the stack.
+// http://stackoverflow.com/questions/3935574/can-i-use-objective-c-blocks-as-properties
+@property (nonatomic, copy) KarapuzBlock storeBlock;
 
 -(id)initWithObj:(id)obj;
 -(id)initWithBlo:(KarapuzBlock)blo;
