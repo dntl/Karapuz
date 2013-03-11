@@ -93,6 +93,7 @@
     self.str = @"test";
     
     STAssertTrue((Karapuz.instance.bindings.count == 0), @"Karapuz bindings should be empty");
+    [Karapuz removeAll];
 }
 
 

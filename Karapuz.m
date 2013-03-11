@@ -194,6 +194,25 @@ static Karapuz *gInstance = NULL;
 //==============================================================================
 
 
++(void)removeAll
+{
+	NSArray *objectsToBeRemoved = [Karapuz.instance.bindings copy];
+	
+	for (NSDictionary *d in objectsToBeRemoved)
+    {
+        WeakStore *weakDst = (WeakStore *)d[@"dst"];
+        if ([Karapuz exists:weakDst])
+        {
+            id dst = weakDst.store;
+            [Karapuz remove:dst];
+        }
+    }
+}
+
+
+//==============================================================================
+
+
 -(void)check
 {
     NSMutableArray *objectsToBeRemoved = [NSMutableArray array];
