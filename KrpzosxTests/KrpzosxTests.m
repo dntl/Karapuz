@@ -99,6 +99,36 @@
 //==============================================================================
 
 
+-(void)test3
+{
+    tmp *t = [[tmp alloc] init];
+    tmp *t2 = [[tmp alloc] init];
+    
+    t.tmpPty = @"11";
+    t.tmpPty2 = @"12";
+    
+    t2.tmpPty = @"21";
+    t2.tmpPty2 = @"22";    
+
+    [Karapuz dst:self selector:NSStringFromSelector(@selector(selectorTest)) withParams:nil src:t pty:@"tmpPty"];
+    
+    NSDictionary *params = [NSDictionary dictionaryWithObject:t2.tmpPty forKey:@"testParam"];
+    
+    [Karapuz dst:self selector:NSStringFromSelector(@selector(selectorTestWithParams:)) withParams:params src:t2 pty:@"tmpPty"];
+    
+    t.tmpPty = @"Selector testing";
+    STAssertTrue([self.str isEqualToString:@"selectorTest"], @"Strings not match");    
+    
+    t2.tmpPty = @"Selector with params testing";
+    STAssertTrue([self.str isEqualToString:@"21"], @"Strings not match");
+    
+    [Karapuz remove:self];
+}
+
+
+//==============================================================================
+
+
 - (void)subscrTmp
 {
     tmp *t = [[tmp alloc] init];
@@ -116,6 +146,24 @@
      }
              src:self
              pty:@"str2"];
+}
+
+
+//==============================================================================
+
+
+-(void)selectorTest
+{
+    self.str = @"selectorTest";
+}
+
+
+//==============================================================================
+
+
+-(void)selectorTestWithParams:(NSDictionary *)params
+{
+    self.str = params[@"testParam"];
 }
 
 

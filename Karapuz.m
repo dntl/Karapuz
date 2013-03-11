@@ -100,6 +100,29 @@ static Karapuz *gInstance = NULL;
 //==============================================================================
 
 
++(void)dst:(id)dst selector:(NSString *)selector withParams:(NSDictionary *)params src:(id)src pty:(NSString *)pty2
+{
+    WeakStore *weakDst = [[WeakStore alloc] initWithObj:dst];
+    WeakStore *weakSrc = [[WeakStore alloc] initWithObj:src];
+    
+    if (!params)
+        params = [NSDictionary dictionaryWithObject:@"" forKey:@"testParam"];
+    
+    NSDictionary *d = @{@"dst": weakDst,
+                        @"selector": selector,
+                        @"params" : params,
+                        @"src": weakSrc,
+                        @"pty2": pty2,
+                        @"dstAddr": [NSString stringWithFormat:@"%p",dst],
+                        @"srcAddr": [NSString stringWithFormat:@"%p",src]};
+    [Karapuz.instance.bindings addObject:d];
+	[src addObserver:Karapuz.instance forKeyPath:pty2 options:0 context:nil];
+}
+
+
+//==============================================================================
+
+
 #pragma mark - Observers
 
 -(void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary *)change context:(void *)context
@@ -107,34 +130,33 @@ static Karapuz *gInstance = NULL;
 	for (NSDictionary *binding in self.bindings)
 	{
 		if ([binding[@"pty2"] isEqualToString:keyPath] && ([binding[@"srcAddr"] isEqualToString:[NSString stringWithFormat:@"%p",object]]))
-		{            
-			NSString *pty = binding[@"pty"];
+		{ 
 			WeakStore *weakDst = (WeakStore *)binding[@"dst"];
-            
-			if (pty)
-			{				
-				id value = objc_msgSend(object, NSSelectorFromString(keyPath));                
-                if ([Karapuz exists:weakDst])
+            if ([Karapuz exists:weakDst])
+            {
+                id dst = weakDst.store;
+                
+                NSString *pty = binding[@"pty"];
+                if (pty)
                 {
-                    id dst = weakDst.store;
+                    id value = objc_msgSend(object, NSSelectorFromString(keyPath));
                     NSString *selectorName = [NSString stringWithFormat:@"set%@:", [pty stringByReplacingCharactersInRange:NSMakeRange(0,1) withString:[[pty substringToIndex:1] capitalizedString]]];
                     objc_msgSend(dst, NSSelectorFromString(selectorName), value);
-                    continue;
                 }
-			}
-			
-            WeakStore *weakBlc = (WeakStore *)binding[@"block"];
-            if (weakBlc && [Karapuz exists:weakDst])
-                if ([Karapuz exists:weakBlc])
-                {
-                    KarapuzBlock block = weakBlc.storeBlock;
-                    if (block)
+                
+                WeakStore *weakBlc = (WeakStore *)binding[@"block"];
+                if (weakBlc)
+                    if ([Karapuz exists:weakBlc])
                     {
-                        block(object, keyPath);
-                        continue;
+                        KarapuzBlock block = weakBlc.storeBlock;
+                        if (block)
+                            block(object, keyPath);
                     }
-                }
-			
+                
+                NSString *selector = binding[@"selector"];
+                if (selector)
+                    objc_msgSend(dst, NSSelectorFromString(selector), binding[@"params"]);
+            }
 		}
 	}
     
