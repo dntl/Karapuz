@@ -45,12 +45,15 @@ typedef void (^KarapuzBlock)(id src, NSString *pty2);
  * @param	dst	The observer to be removed.
  */
 +(void)remove:(id)dst;
++(void)removeAll;
 
 
 
 +(void)dst:(id)dst block:(KarapuzBlock)block src:(id)src pty:(NSString *)pty2;
 
 +(void)dst:(id)dst selector:(NSString *)selector withParams:(NSDictionary *)params src:(id)src pty:(NSString *)pty2;
+
++(void)dst:(id)dst selector:(SEL)selector src:(id)src pty:(NSString *)pty2;
 
 @end
 

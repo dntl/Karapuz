@@ -123,6 +123,25 @@ static Karapuz *gInstance = NULL;
 //==============================================================================
 
 
++(void)dst:(id)dst selector:(SEL)selector src:(id)src pty:(NSString *)pty2
+{
+    WeakStore *weakDst = [[WeakStore alloc] initWithObj:dst];
+    WeakStore *weakSrc = [[WeakStore alloc] initWithObj:src];
+    
+    NSDictionary *d = @{@"dst": weakDst,
+                        @"sel": [NSValue valueWithPointer:selector],
+                        @"src": weakSrc,
+                        @"pty2": pty2,
+                        @"dstAddr": [NSString stringWithFormat:@"%p",dst],
+                        @"srcAddr": [NSString stringWithFormat:@"%p",src]};
+    [Karapuz.instance.bindings addObject:d];
+	[src addObserver:Karapuz.instance forKeyPath:pty2 options:0 context:nil];
+}
+
+
+//==============================================================================
+
+
 #pragma mark - Observers
 
 -(void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary *)change context:(void *)context
@@ -155,7 +174,13 @@ static Karapuz *gInstance = NULL;
                 
                 NSString *selector = binding[@"selector"];
                 if (selector)
-                    objc_msgSend(dst, NSSelectorFromString(selector), binding[@"params"]);
+                    objc_msgSend(dst, NSSelectorFromString(selector), binding[@"params"]);                
+                
+                if (binding[@"sel"])
+                {
+                    SEL sel = [binding[@"sel"] pointerValue];                
+                    objc_msgSend(dst, sel);
+                }
             }
 		}
 	}
@@ -188,6 +213,25 @@ static Karapuz *gInstance = NULL;
 		[Karapuz.instance.bindings removeObject:d];
     
     [Karapuz.instance check];
+}
+
+
+//==============================================================================
+
+
++(void)removeAll
+{
+	NSArray *objectsToBeRemoved = [Karapuz.instance.bindings copy];
+	
+	for (NSDictionary *d in objectsToBeRemoved)
+    {
+        WeakStore *weakDst = (WeakStore *)d[@"dst"];
+        if ([Karapuz exists:weakDst])
+        {
+            id dst = weakDst.store;
+            [Karapuz remove:dst];
+        }
+    }
 }
 
 
