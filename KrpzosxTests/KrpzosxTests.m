@@ -130,6 +130,25 @@
 //==============================================================================
 
 
+-(void)test4
+{
+    tmp *t = [[tmp alloc] init];
+    
+    t.tmpPty = @"11";
+    self.str = @"";
+    
+    [Karapuz dst:self selector:@selector(selectorTest) src:t pty:@"tmpPty"];
+    
+    t.tmpPty = @"Selector testing";
+    STAssertTrue([self.str isEqualToString:@"selectorTest"], @"Strings not match");
+    
+    [Karapuz remove:self];
+}
+
+
+//==============================================================================
+
+
 - (void)subscrTmp
 {
     tmp *t = [[tmp alloc] init];
