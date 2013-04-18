@@ -146,7 +146,8 @@ static Karapuz *gInstance = NULL;
 
 -(void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary *)change context:(void *)context
 {
-	for (NSDictionary *binding in self.bindings)
+	NSArray *tmpArray = [NSArray arrayWithArray:self.bindings];
+	for (NSDictionary *binding in tmpArray)
 	{
 		if ([binding[@"pty2"] isEqualToString:keyPath] && ([binding[@"srcAddr"] isEqualToString:[NSString stringWithFormat:@"%p",object]]))
 		{ 
